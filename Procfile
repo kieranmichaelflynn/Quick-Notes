@@ -1,2 +1,1 @@
-# server.js is the app file.
-web: node server.js
+web: npm start
