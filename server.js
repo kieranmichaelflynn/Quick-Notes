@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-app.use("/", webRouter);
 app.use("/api", apiRouter);
+app.use("/", webRouter);
 
 
 app.listen(PORT, function(){
