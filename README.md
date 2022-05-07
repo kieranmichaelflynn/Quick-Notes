@@ -15,11 +15,13 @@ This application is a useful tool which is designed to create, edit and organise
 
 ## Installation 
 
-Simply access the live deployment on Heroku and you're ready to start taking notes!
+Simply access the [Live Deployment](https://quick-notes-kf.herokuapp.com/) on Heroku and you're ready to start taking notes!
 
 ## Usage
 
 To use Quick Notes, all you have to do is click 'Get started' and you'll instantly see a new note which you can begin writing in. You can use these notes for all sorts of things, including shopping lists, tasks you have to do, important bits of information you want to remember and so much more! Once you've finished typing your note, click the 'save' icon and your note will be stored on the left side of the screen. To access previous notes, click on their title to open. To delete notes, click the 'bin' icon. You're all set, enjoy Quick Notes!
+
+![quickNotesDemoPhoto](quickNotesDemo.png)
 
 ## License
 This project is created under the MIT license
