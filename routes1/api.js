@@ -16,7 +16,7 @@ function saveNotesToDb(notes) {
   fs.writeFileSync(dbPath, JSON.stringify(notes), 'utf8');
 }
 
-router.get("/api/notes", (req, res) => {
+router.get("/notes", (req, res) => {
 
 
   res.json(getNotes());
@@ -24,7 +24,7 @@ router.get("/api/notes", (req, res) => {
 
 });
 
-router.post("/api/notes", (req, res) => {
+router.post("/notes", (req, res) => {
 
   // create a new note
   console.log(req.body);
@@ -54,7 +54,7 @@ router.post("/api/notes", (req, res) => {
   })
 });
 
-router.delete("/api/notes/:id", (req, res) => {
+router.delete("/notes/:id", (req, res) => {
 
   // get all the notes
   const notes = getNotes();
