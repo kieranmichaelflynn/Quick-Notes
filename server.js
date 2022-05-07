@@ -9,8 +9,8 @@ app.use( express.static('public'));
 
 app.use(express.json());
 
-app.use(webRouter);
-app.use(apiRouter);
+app.use("/", webRouter);
+app.use("/api", apiRouter);
 
 
 app.listen(PORT, function(){
