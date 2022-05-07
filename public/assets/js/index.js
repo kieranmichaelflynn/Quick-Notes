@@ -182,7 +182,9 @@ if (window.location.pathname === '/notes') {
 
 getAndRenderNotes();
 
-document.getElementById('return').addEventListener('click', (e)=> {
-  e.preventDefault();
-  window.location.pathname = "/"
-})
+if (window.location.pathname === '*') {
+  document.getElementById('return').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.pathname = "/"
+  })
+};
