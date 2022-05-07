@@ -1,9 +1,9 @@
 // const express = require('express');
-const path = require('path');
+const path = require("path");
 // const router = express.Router();
-const router = require('express').Router();
-const fs = require('fs');
-const { v4 } = require('uuid');
+const router = require("express").Router();
+const fs = require("fs");
+const { v4 } = require("uuid");
 
 const dbPath = path.join(__dirname, '..', 'db', 'db.json');
 
@@ -19,7 +19,7 @@ function saveNotesToDb(notes) {
 router.get('/api/notes', (req, res) => {
 
 
-  res(getNotes())
+  res.JSON(getNotes());
 
 
 });
