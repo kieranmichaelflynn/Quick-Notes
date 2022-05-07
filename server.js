@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-app.use("/api", apiRouter);
+app.use("/api/notes", apiRouter);
 app.use("/", webRouter);
 
 

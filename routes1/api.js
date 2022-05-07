@@ -1,11 +1,11 @@
 // const express = require('express');
 const path = require("path");
 // const router = express.Router();
-const router = require("express").Router();
+const router = require('express').Router();
 const fs = require("fs");
 const { v4 } = require("uuid");
 
-const dbPath = path.join(__dirname, '..', 'db', 'db.json');
+const dbPath = path.join(__dirname, "..", "db", "db.json");
 
 function getNotes() {
   return JSON.parse(fs.readFileSync(dbPath, 'utf8'));
@@ -16,7 +16,7 @@ function saveNotesToDb(notes) {
   fs.writeFileSync(dbPath, JSON.stringify(notes), 'utf8');
 }
 
-router.get('/api/notes', (req, res) => {
+router.get("/api/notes", (req, res) => {
 
 
   res.JSON(getNotes());
@@ -24,7 +24,7 @@ router.get('/api/notes', (req, res) => {
 
 });
 
-router.post('/api/notes', (req, res) => {
+router.post("/api/notes", (req, res) => {
 
   // create a new note
   console.log(req.body);
@@ -54,7 +54,7 @@ router.post('/api/notes', (req, res) => {
   })
 });
 
-router.delete('/api/notes/:id', (req, res) => {
+router.delete("/api/notes/:id", (req, res) => {
 
   // get all the notes
   const notes = getNotes();
