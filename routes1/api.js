@@ -19,7 +19,7 @@ function saveNotesToDb(notes) {
 router.get('/api/notes', (req, res) => {
 
 
-  res.json(getNotes())
+  res(getNotes())
 
 
 });
