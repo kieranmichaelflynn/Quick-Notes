@@ -6,11 +6,6 @@ const { v4 } = require('uuid');
 
 const dbPath = path.join(__dirname, '..', 'db', 'db.json');
 
-
-/**
- * 
- * @returns {Array}
- */
 function getNotes(){
   return JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 }
@@ -20,8 +15,6 @@ function saveNotesToDb(notes){
   fs.writeFileSync(dbPath, JSON.stringify(notes), 'utf8');
 }
 
-
-
 router.get('/api/notes', (req, res) => {
   
 
@@ -29,7 +22,6 @@ router.get('/api/notes', (req, res) => {
 
 
 });
-
 
 router.post('/api/notes', (req, res) => {
 
@@ -40,7 +32,6 @@ router.post('/api/notes', (req, res) => {
   // const title = req.body.title;
   // const text = req.body.text;
   const {title, text} = req.body;
-
 
   // generate an ID to the new note
   const newNote = {
@@ -60,16 +51,12 @@ router.post('/api/notes', (req, res) => {
   res.json({
     data: 'ok',
   })
-
-
-
 });
 
 router.delete('/api/notes/:id', (req, res) => {
 
   // get all the notes
   const notes = getNotes();
-
 
   // filter out the target note
   const result = notes.filter((note) => {
@@ -84,10 +71,5 @@ router.delete('/api/notes/:id', (req, res) => {
   })
 
 })
-
-
-
-
-
 
 module.exports = router;

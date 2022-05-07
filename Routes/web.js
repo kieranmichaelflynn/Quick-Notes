@@ -4,7 +4,6 @@ const path = require("path");
 const router = express.Router();
 
 
-
 router.get("/", (req, res) => {
   const indexHtmlPath = path.join(__dirname, '..', "public", "index.html");
 
@@ -17,7 +16,10 @@ router.get("/notes", (req, res) => {
   res.sendFile(notesHtmlPath);
 });
 
+router.get("*", (req, res) => {
+  const notFoundHtmlPath = path.join(__dirname, '..', "public", "404.html");
 
-
+  res.sendFile(notFoundHtmlPath);
+});
 
 module.exports = router;

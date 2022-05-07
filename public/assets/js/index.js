@@ -181,3 +181,8 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+document.getElementById('return').addEventListener('click', (e)=> {
+  e.preventDefault();
+  window.location.pathname = "/"
+})
